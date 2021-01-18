@@ -13,10 +13,9 @@ def asignaturax(request):
     for i in range(0,1):
         asignatura = Asignatura(nombre= 'Walter',
         descripcion = 'walter es muy pesaito',
-        departamento = departamento_id
+        departamento = Departamento.objects.get(departamento_id=1)
         )    
     asignatura.save()
-    Departamento.objects.values()
     asignatura = Asignatura.objects.values()
     context = {'asig': asignatura}    
     return render(request, 'migrate_01/asignatura.html', context)

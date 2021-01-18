@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Departamento(models.Model):
-    
+    departamento_id = models.AutoField(primary_key=True, default=None)
     nombre = models.CharField(max_length=15)
 
 
